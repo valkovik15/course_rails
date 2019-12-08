@@ -1,0 +1,15 @@
+<div class="container"> 
+<%= form_tag('/upload', multipart: true, id: "contact") do |form| %>
+    <h3>Test upload form</h3>
+    <%= text_field_tag(:test_number, '', placeholder: 'Test number') %>
+    <%= text_field_tag(:test_variant, '', placeholder: 'Test variant') %>
+    <%= text_field_tag(:student_id, '', placeholder: 'Student id') %>
+    <%= text_field_tag(:max_letter, '', placeholder: 'Maximum letter') %>
+    <label for="answers">Answers' JSON</label>
+    <%= file_field_tag :answers %>
+     <label for="file">Test photo</label>
+     <%= file_field_tag :file %>
+     
+    <%= submit_tag %>
+  <% end %>
+  </div>
